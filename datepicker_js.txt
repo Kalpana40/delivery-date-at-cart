@@ -1,0 +1,14 @@
+$(document).ready( function() {
+  $(function() {
+    $("#date").datepicker( {
+      minDate: 'today',
+    } );
+  });
+
+  $('[name="checkout"]').on('click',function(){
+    if($("#date").val() == ''){
+      $("#date").focus();
+      return false;
+    }
+  });
+});
